@@ -1,11 +1,13 @@
 ---
-title: About
+title: Chi siamo
 permalink: /about/index.html
-description: 'Eleventy Excellent is inspired bythe companion website of Andy Bell’s talk "Be the browser’s mentor, not its micromanager".'
+description: 'CodiceSolidale — Tecnologia open source al servizio delle comunità.'
 layout: page
 ---
 
-This starter uses modern CSS, fluid type & space, flexible Layouts and Progressive Enhancement, wrapped in a basic template.
+→ [Leggi la pagina Chi siamo in italiano](/it/chi-siamo/)
+
+→ [Read About us in English](/en/about/)
 
 It is built around the CSS boilerplate by Andy Bell and inspired by Andy's talk **'Be the browser’s mentor, not its micromanager'**.
 

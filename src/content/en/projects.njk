@@ -1,0 +1,126 @@
+---
+layout: base
+title: Projects
+description: 'Explore CodiceSolidale open source projects: apps, platforms and digital tools built by volunteers for nonprofit organizations.'
+---
+
+<div class="wrapper">
+
+  <header class="full | section spot-color-theme-secondary">
+    <div class="section__inner flow region" style="--region-space: var(--space-xl-2xl);">
+      <div class="prose wrapper flow">
+        <h1>Projects</h1>
+        <p class="text-step-1">Open source digital tools built by our community for nonprofit organizations around the world.</p>
+      </div>
+    </div>
+    {% svg "divider/edgy", null, "divider" %}
+  </header>
+
+  <section class="full | region">
+    <div class="wrapper flow">
+      <h2>Active Projects</h2>
+      <div class="grid" style="--grid-min-item-size: 18rem;">
+
+        <custom-card>
+          <h3 slot="headline">🚨 Emergency App — Red Cross</h3>
+          <p slot="content">
+            Integrated alert and coordination system for a local Red Cross chapter.
+            Volunteer shift management, push notifications for emergencies, incident tracking
+            and automated reports for coordinators.
+          </p>
+          <footer slot="footer">
+            <strong>Stack:</strong> React Native · Node.js · PostgreSQL · Firebase<br>
+            <strong>Status:</strong> ✅ Completed — live since 2023
+          </footer>
+        </custom-card>
+
+        <custom-card>
+          <h3 slot="headline">🥗 Food Sharing Platform</h3>
+          <p slot="content">
+            Connects supermarkets, restaurants and bakeries with community canteens and families in need
+            to redistribute surplus food. Reduces food waste and helps those who need it most.
+            Currently active in 3 cities.
+          </p>
+          <footer slot="footer">
+            <strong>Stack:</strong> Vue.js · Python/FastAPI · Redis · PostgreSQL<br>
+            <strong>Status:</strong> ✅ Completed — expanding
+          </footer>
+        </custom-card>
+
+        <custom-card>
+          <h3 slot="headline">📚 Offline Education Portal</h3>
+          <p slot="content">
+            Free e-learning platform for children in areas with limited connectivity. Works
+            as a Progressive Web App with downloadable content. Supports 8 languages and
+            includes tools for teachers.
+          </p>
+          <footer slot="footer">
+            <strong>Stack:</strong> Eleventy · PWA · Service Worker · IndexedDB<br>
+            <strong>Status:</strong> 🔄 In development — frontend developers needed
+          </footer>
+        </custom-card>
+
+        <custom-card>
+          <h3 slot="headline">♿ Accessibility Tools for NGOs</h3>
+          <p slot="content">
+            Suite of browser extensions and JavaScript libraries to make NGO websites accessible
+            to users with visual, motor and cognitive disabilities.
+            Follows WCAG 2.2 guidelines.
+          </p>
+          <footer slot="footer">
+            <strong>Stack:</strong> TypeScript · ARIA · WCAG 2.2<br>
+            <strong>Status:</strong> 🔄 In development — accessibility experts needed
+          </footer>
+        </custom-card>
+
+        <custom-card>
+          <h3 slot="headline">💧 Water Quality Monitor</h3>
+          <p slot="content">
+            Dashboard for humanitarian organizations monitoring water quality in crisis zones.
+            Integrates IoT sensors, real-time data visualization and automatic alert system
+            for coordinators.
+          </p>
+          <footer slot="footer">
+            <strong>Stack:</strong> React · Python · InfluxDB · MQTT<br>
+            <strong>Status:</strong> ✅ Completed — deployed in 4 countries
+          </footer>
+        </custom-card>
+
+        <custom-card>
+          <h3 slot="headline">📋 Volunteer Management</h3>
+          <p slot="content">
+            Open source CRM designed for the specific needs of volunteer organizations:
+            skills profiling, availability management, project matching and
+            service hours tracking.
+          </p>
+          <footer slot="footer">
+            <strong>Stack:</strong> Django · React · PostgreSQL<br>
+            <strong>Status:</strong> 🔄 In development — backend developers needed
+          </footer>
+        </custom-card>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="full | section spot-color-theme-primary">
+    <div class="section__inner flow region">
+      <div class="prose wrapper flow">
+        <h2>Propose a project</h2>
+        <p>
+          Do you represent a nonprofit organization and have a digital need?
+          Or do you have an idea for a tool that could help many organizations?
+        </p>
+        <p>
+          Open an issue on our GitHub repository or write to us directly.
+          We evaluate every proposal and, if feasible, include it in the community backlog.
+        </p>
+        <div class="cluster" style="gap: var(--space-s);">
+          <a href="https://github.com/codicesolidale" class="button" rel="noopener noreferrer" target="_blank">Open an issue on GitHub</a>
+          <a href="mailto:info@codicesolidale.org" class="button">Write to us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>

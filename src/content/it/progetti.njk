@@ -1,0 +1,126 @@
+---
+layout: base
+title: Progetti
+description: 'Esplora i progetti open source di CodiceSolidale: app, piattaforme e strumenti digitali costruiti da volontari per organizzazioni no profit.'
+---
+
+<div class="wrapper">
+
+  <header class="full | section spot-color-theme-secondary">
+    <div class="section__inner flow region" style="--region-space: var(--space-xl-2xl);">
+      <div class="prose wrapper flow">
+        <h1>Progetti</h1>
+        <p class="text-step-1">Strumenti digitali open source costruiti dalla nostra community per organizzazioni no profit in tutto il mondo.</p>
+      </div>
+    </div>
+    {% svg "divider/edgy", null, "divider" %}
+  </header>
+
+  <section class="full | region">
+    <div class="wrapper flow">
+      <h2>Progetti attivi</h2>
+      <div class="grid" style="--grid-min-item-size: 18rem;">
+
+        <custom-card>
+          <h3 slot="headline">🚨 App di emergenza — Croce Rossa</h3>
+          <p slot="content">
+            Sistema integrato di allerta e coordinamento per la sezione locale della Croce Rossa.
+            Gestione turni dei volontari, invio notifiche push in caso di emergenza, tracciamento interventi
+            e reportistica automatica per il coordinatore.
+          </p>
+          <footer slot="footer">
+            <strong>Stack:</strong> React Native · Node.js · PostgreSQL · Firebase<br>
+            <strong>Stato:</strong> ✅ Completato — in produzione dal 2023
+          </footer>
+        </custom-card>
+
+        <custom-card>
+          <h3 slot="headline">🥗 Piattaforma food sharing</h3>
+          <p slot="content">
+            Connette supermercati, ristoranti e panifici con le mense sociali e le famiglie in difficoltà
+            per redistribuire cibo in eccesso. Riduce gli sprechi alimentari e aiuta chi ha bisogno.
+            Attualmente attiva in 3 città.
+          </p>
+          <footer slot="footer">
+            <strong>Stack:</strong> Vue.js · Python/FastAPI · Redis · PostgreSQL<br>
+            <strong>Stato:</strong> ✅ Completato — in espansione
+          </footer>
+        </custom-card>
+
+        <custom-card>
+          <h3 slot="headline">📚 Portale educativo offline</h3>
+          <p slot="content">
+            Piattaforma e-learning gratuita per bambini in aree con connettività limitata. Funziona
+            come Progressive Web App con contenuti scaricabili. Supporta 8 lingue e include
+            strumenti per gli insegnanti.
+          </p>
+          <footer slot="footer">
+            <strong>Stack:</strong> Eleventy · PWA · Service Worker · IndexedDB<br>
+            <strong>Stato:</strong> 🔄 In sviluppo — cercasi sviluppatori frontend
+          </footer>
+        </custom-card>
+
+        <custom-card>
+          <h3 slot="headline">♿ Strumenti accessibilità per ONG</h3>
+          <p slot="content">
+            Suite di estensioni browser e librerie JavaScript per rendere accessibili i siti delle
+            organizzazioni no profit agli utenti con disabilità visive, motorie e cognitive.
+            Segue le linee guida WCAG 2.2.
+          </p>
+          <footer slot="footer">
+            <strong>Stack:</strong> TypeScript · ARIA · WCAG 2.2<br>
+            <strong>Stato:</strong> 🔄 In sviluppo — cercasi esperti accessibilità
+          </footer>
+        </custom-card>
+
+        <custom-card>
+          <h3 slot="headline">💧 Monitor qualità acqua</h3>
+          <p slot="content">
+            Dashboard per organizzazioni umanitarie che monitorano la qualità dell'acqua in zone
+            di crisi. Integra sensori IoT, visualizzazione dati in tempo reale e sistema di alert
+            automatici per i coordinatori.
+          </p>
+          <footer slot="footer">
+            <strong>Stack:</strong> React · Python · InfluxDB · MQTT<br>
+            <strong>Stato:</strong> ✅ Completato — distribuito in 4 paesi
+          </footer>
+        </custom-card>
+
+        <custom-card>
+          <h3 slot="headline">📋 Gestione volontari</h3>
+          <p slot="content">
+            CRM open source progettato per le esigenze specifiche delle organizzazioni di volontariato:
+            profilazione competenze, gestione disponibilità, matching con progetti e tracciamento
+            delle ore di servizio.
+          </p>
+          <footer slot="footer">
+            <strong>Stack:</strong> Django · React · PostgreSQL<br>
+            <strong>Stato:</strong> 🔄 In sviluppo — cercasi sviluppatori backend
+          </footer>
+        </custom-card>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="full | section spot-color-theme-primary">
+    <div class="section__inner flow region">
+      <div class="prose wrapper flow">
+        <h2>Proponi un progetto</h2>
+        <p>
+          Rappresenti un'organizzazione no profit e hai un bisogno digitale?
+          O hai un'idea per uno strumento che potrebbe aiutare molte organizzazioni?
+        </p>
+        <p>
+          Apri una issue sul nostro repository GitHub o scrivici direttamente.
+          Valutiamo ogni proposta e, se fattibile, la includiamo nel backlog della community.
+        </p>
+        <div class="cluster" style="gap: var(--space-s);">
+          <a href="https://github.com/codicesolidale" class="button" rel="noopener noreferrer" target="_blank">Apri una issue su GitHub</a>
+          <a href="mailto:info@codicesolidale.org" class="button">Scrivici</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>

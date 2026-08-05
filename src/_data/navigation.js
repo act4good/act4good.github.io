@@ -1,16 +1,16 @@
 export default {
   top: [
     {
-      text: 'About',
-      url: '/about/'
+      text: 'Progetti',
+      url: '/it/progetti/'
     },
     {
-      text: 'Docs',
-      url: '/get-started/'
+      text: 'Unisciti',
+      url: '/it/unisciti/'
     },
     {
-      text: 'Built with',
-      url: '/built-with/'
+      text: 'Chi siamo',
+      url: '/it/chi-siamo/'
     },
     {
       text: 'Blog',
@@ -19,20 +19,16 @@ export default {
   ],
   bottom: [
     {
-      text: 'Style guide',
-      url: '/styleguide/'
-    },
-    {
-      text: 'Imprint',
-      url: '/imprint/'
-    },
-    {
       text: 'Privacy',
       url: '/privacy/'
     },
     {
-      text: 'Accessibility',
+      text: 'Accessibilità',
       url: '/accessibility/'
+    },
+    {
+      text: 'Note legali',
+      url: '/legal/'
     }
   ]
 };

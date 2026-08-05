@@ -1,0 +1,166 @@
+---
+layout: base
+title: 'CodiceSolidale — Tecnologia per il bene comune'
+description: 'Uniamo sviluppatori, designer e volontari per costruire strumenti digitali a impatto sociale. Entra nella community di CodiceSolidale.'
+permalink: /it/
+lang: it
+locale: it_IT
+---
+
+<div class="wrapper">
+
+  {# ── HERO ─────────────────────────────────────────────────────── #}
+  <header class="full | section spot-color-theme-primary">
+    <div class="section__inner flow region" style="--region-space: var(--space-xl-2xl);">
+      <div class="prose wrapper flow" style="text-align: center;">
+        <h1 class="gradient-text">Tecnologia per il bene comune</h1>
+        <p class="text-step-1">
+          Uniamo sviluppatori, designer, comunicatori e volontari per costruire
+          strumenti digitali a impatto sociale.<br>
+          <strong>Chiunque può contribuire.</strong>
+        </p>
+        <div class="cluster" style="justify-content: center; gap: var(--space-s);">
+          <a href="/it/unisciti/" class="button">Unisciti a noi</a>
+          <a href="/it/progetti/" class="button" data-variant="ghost">Esplora i progetti</a>
+        </div>
+      </div>
+    </div>
+    {% svg "divider/waves", null, "divider" %}
+  </header>
+
+  {# ── COME FUNZIONA ────────────────────────────────────────────── #}
+  <section class="full | region">
+    <div class="wrapper flow">
+      <h2 class="text-center" style="--flow-space: 0;">Come funziona</h2>
+      <div class="grid" style="--grid-min-item-size: 14rem; margin-block-start: var(--space-l);">
+        <div class="flow">
+          <p class="text-step-3" aria-hidden="true">💡</p>
+          <h3>Le nonprofit pubblicano idee</h3>
+          <p>Le organizzazioni no profit condividono i loro bisogni digitali: app, siti web, strumenti di gestione e comunicazione.</p>
+        </div>
+        <div class="flow">
+          <p class="text-step-3" aria-hidden="true">👩‍💻</p>
+          <h3>I volontari si uniscono</h3>
+          <p>Sviluppatori, designer, comunicatori e appassionati trovano il progetto adatto alle proprie competenze e disponibilità.</p>
+        </div>
+        <div class="flow">
+          <p class="text-step-3" aria-hidden="true">🚀</p>
+          <h3>Si costruisce insieme</h3>
+          <p>Il team collabora in modo agile e open source, con supporto mentoring per chi si avvicina per la prima volta.</p>
+        </div>
+        <div class="flow">
+          <p class="text-step-3" aria-hidden="true">❤️</p>
+          <h3>Le comunità ne beneficiano</h3>
+          <p>Il software viene consegnato gratuitamente, con codice aperto e documentazione completa per chi ne prende la gestione.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# ── PERCHÉ PARTECIPARE ───────────────────────────────────────── #}
+  <section class="full | section spot-color-theme-secondary">
+    <div class="section__inner flow region">
+      <div class="wrapper flow">
+        <h2 class="text-center" style="--flow-space: 0;">Perché partecipare</h2>
+        <div class="grid" style="--grid-min-item-size: 16rem; margin-block-start: var(--space-l);">
+          <article class="flow">
+            <h3>🌍 Fai la differenza</h3>
+            <p>Il tuo contributo aiuta concretamente persone in difficoltà, organizzazioni umanitarie e comunità vulnerabili in tutto il mondo.</p>
+            <a href="/it/unisciti/" class="button">Inizia ora</a>
+          </article>
+          <article class="flow">
+            <h3>📈 Cresci professionalmente</h3>
+            <p>Lavora su progetti reali, impara nuove tecnologie e costruisci un portfolio open source riconoscibile da recruiter e collaboratori.</p>
+            <a href="/it/progetti/" class="button">Vedi i progetti</a>
+          </article>
+          <article class="flow">
+            <h3>🤝 Incontra persone straordinarie</h3>
+            <p>Entra in una rete globale di persone unite dalla stessa passione: usare la tecnologia per migliorare il mondo.</p>
+            <a href="/it/chi-siamo/" class="button">Scopri chi siamo</a>
+          </article>
+        </div>
+      </div>
+    </div>
+    {% svg "divider/edgy", null, "divider" %}
+  </section>
+
+  {# ── PROGETTI IN EVIDENZA ─────────────────────────────────────── #}
+  <section class="full | region">
+    <div class="wrapper flow">
+      <h2 class="text-center" style="--flow-space: 0;">Progetti in evidenza</h2>
+      <p class="text-center">Strumenti concreti costruiti dalla nostra community per organizzazioni che ne hanno bisogno.</p>
+      <div class="grid" style="--grid-min-item-size: 15rem; margin-block-start: var(--space-l);">
+        <custom-card clickable>
+          <h3 slot="headline"><a href="/it/progetti/">App di emergenza</a></h3>
+          <p slot="content">Sistema di allerta e coordinamento per la Croce Rossa locale: gestione volontari, turni e interventi in tempo reale.</p>
+          <footer slot="footer">React Native · Node.js · PostgreSQL</footer>
+        </custom-card>
+        <custom-card clickable>
+          <h3 slot="headline"><a href="/it/progetti/">Piattaforma food sharing</a></h3>
+          <p slot="content">Connette supermercati e ristoranti con le mense sociali per redistribuire cibo in eccesso ed evitare sprechi.</p>
+          <footer slot="footer">Vue.js · Python · Redis</footer>
+        </custom-card>
+        <custom-card clickable>
+          <h3 slot="headline"><a href="/it/progetti/">Portale educativo</a></h3>
+          <p slot="content">Piattaforma e-learning gratuita per bambini in aree svantaggiate, con contenuti offline e supporto multilingue.</p>
+          <footer slot="footer">Eleventy · PWA · IndexedDB</footer>
+        </custom-card>
+        <custom-card clickable>
+          <h3 slot="headline"><a href="/it/progetti/">Strumenti accessibilità</a></h3>
+          <p slot="content">Suite di estensioni browser e librerie per rendere accessibili i siti delle ONG agli utenti con disabilità visive.</p>
+          <footer slot="footer">JavaScript · WCAG 2.2 · ARIA</footer>
+        </custom-card>
+      </div>
+      <div class="text-center" style="margin-block-start: var(--space-l);">
+        <a href="/it/progetti/" class="button">Vedi tutti i progetti</a>
+      </div>
+    </div>
+  </section>
+
+  {# ── IMPATTO ──────────────────────────────────────────────────── #}
+  <section class="full | section spot-color-theme-primary">
+    <div class="section__inner region">
+      <div class="wrapper">
+        <h2 class="text-center" style="color: var(--color-text);">Il nostro impatto</h2>
+        <div class="grid text-center" style="--grid-min-item-size: 10rem; margin-block-start: var(--space-l);">
+          <div class="flow">
+            <p class="text-step-4 font-bold" style="color: var(--color-text);">250+</p>
+            <p>Volontari attivi</p>
+          </div>
+          <div class="flow">
+            <p class="text-step-4 font-bold" style="color: var(--color-text);">45</p>
+            <p>Progetti completati</p>
+          </div>
+          <div class="flow">
+            <p class="text-step-4 font-bold" style="color: var(--color-text);">120k</p>
+            <p>Persone aiutate</p>
+          </div>
+          <div class="flow">
+            <p class="text-step-4 font-bold" style="color: var(--color-text);">18</p>
+            <p>Paesi raggiunti</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% svg "divider/waves", null, "divider" %}
+  </section>
+
+  {# ── ULTIMI DAL BLOG ──────────────────────────────────────────── #}
+  <section class="full | region">
+    <div class="prose wrapper flow">
+      <h2>Dal blog</h2>
+      <p>News, storie di impatto e guide dalla nostra community.</p>
+      <div class="feature | region" style="--region-space: var(--space-l);">
+        <custom-masonry layout="50-50">
+          {% set itemList = collections.allPosts %}
+          {% asyncEach item in itemList.slice(0, 4) %}
+            {% set headingLevel = "h3" %}
+            {% include "partials/card-blog.njk" %}
+          {% endeach %}
+        </custom-masonry>
+      </div>
+      <p><a href="/blog/" class="button">Tutti gli articoli</a></p>
+    </div>
+  </section>
+
+</div>

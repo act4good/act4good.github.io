@@ -1,0 +1,5 @@
+{
+  "lang": "it",
+  "locale": "it_IT",
+  "permalink": "/it/{{ page.fileSlug }}/"
+}
