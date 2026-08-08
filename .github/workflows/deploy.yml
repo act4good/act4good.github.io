@@ -1,0 +1,40 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main          # triggers on every push to main
+
+  workflow_dispatch:  # allows manual trigger from GitHub UI
+
+permissions:
+  contents: write     # needed by peaceiris/actions-gh-pages
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+        env:
+          URL: ${{ vars.SITE_URL }}   # set this in repo settings (see §10)
+
+      - name: Deploy to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}   # it's automatically created by GitHub Actions each workflow run, no need to create it manually
+          publish_dir: ./dist
+          #cname: act4good.org       # remove this line if not using a custom domain
