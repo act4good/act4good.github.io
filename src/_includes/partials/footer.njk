@@ -7,6 +7,7 @@
           ><span class="font-display">{{ meta.siteName }}</span> <small>{{ pkg.version }}</small>
         </a>
 
+        {% set t = translations[lang or meta.lang] %}
         {% for item in navigation.bottom %}
           <a
             href="{{ item.url }}"
@@ -16,7 +17,7 @@
               |
               safe
             }}
-            >{{ item.text }}</a
+            >{{ t.nav[item.key] or item.key }}</a
           >
         {% endfor %}
       </nav>

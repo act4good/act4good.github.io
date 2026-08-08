@@ -1,33 +1,33 @@
 export default {
   top: [
     {
-      text: 'Progetti',
-      url: '/it/progetti/'
+      key: 'projects',
+      urls: { it: '/it/progetti/', en: '/en/projects/' }
     },
     {
-      text: 'Unisciti',
-      url: '/it/unisciti/'
+      key: 'join',
+      urls: { it: '/it/unisciti/', en: '/en/join/' }
     },
     {
-      text: 'Chi siamo',
-      url: '/it/chi-siamo/'
+      key: 'about',
+      urls: { it: '/it/chi-siamo/', en: '/en/about/' }
     },
     {
-      text: 'Blog',
+      key: 'blog',
       url: '/blog/'
     }
   ],
   bottom: [
     {
-      text: 'Privacy',
+      key: 'privacy',
       url: '/privacy/'
     },
     {
-      text: 'Accessibilità',
+      key: 'accessibility',
       url: '/accessibility/'
     },
     {
-      text: 'Note legali',
+      key: 'legal',
       url: '/legal/'
     }
   ]

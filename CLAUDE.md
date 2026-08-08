@@ -51,7 +51,7 @@ src/
 │
 ├── _data/                    # Global data — JS (ES modules), JSON, YAML
 │   ├── meta.js               # Site metadata: URL, siteName, lang, locale, author, OG
-│   ├── navigation.js         # Nav arrays: top[] and bottom[]
+│   ├── navigation.js         # Nav arrays: top[] and bottom[]; items use key+urls for i18n
 │   ├── helpers.js            # Utility functions (getLinkActiveState, random, etc.)
 │   ├── personal.yaml         # Org-specific data
 │   ├── designTokens/         # Design tokens → Tailwind utilities
@@ -181,6 +181,31 @@ Examples: `meta-info.njk`, `schema.njk`, `css-inline.njk`
 - UI strings (nav labels, buttons, stats) live in `src/_data/translations/{lang}.js`
 - Language is auto-detected client-side from `navigator.language`
 - A manual language switcher is present in the header
+
+## Navigation i18n
+
+Each item in `navigation.js` uses a `key` instead of a hardcoded `text`.
+Items with language-specific URL slugs also carry a `urls` map; language-neutral
+items (blog, footer links) keep a single `url`.
+
+```js
+// top item with language-specific URLs
+{ key: 'projects', urls: { it: '/it/progetti/', en: '/en/projects/' } }
+
+// language-neutral item
+{ key: 'blog', url: '/blog/' }
+```
+
+In `main-nav.njk` and `footer.njk` the label and URL are resolved at render time:
+
+```njk
+{% set t = translations[lang or meta.lang] %}
+{{ t.nav[item.key] }}                                        {# translated label #}
+{{ item.urls[lang or meta.lang] if item.urls else item.url }} {# correct URL     #}
+```
+
+All `nav.*` keys (including `privacy`, `accessibility`, `legal`) must be present
+in every translation file.
 
 ## Language Config (`src/_data/languages.js`)
 

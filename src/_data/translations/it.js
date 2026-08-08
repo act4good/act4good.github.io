@@ -4,7 +4,10 @@ export default {
     about: 'Chi siamo',
     projects: 'Progetti',
     join: 'Unisciti',
-    blog: 'Blog'
+    blog: 'Blog',
+    privacy: 'Privacy',
+    accessibility: 'Accessibilità',
+    legal: 'Note legali'
   },
   common: {
     donate: 'Sostienici',
