@@ -1,7 +1,7 @@
 export const url = process.env.URL || 'http://localhost:8080';
 // Extract domain from `url`
 export const domain = new URL(url).hostname;
-export const siteName = 'CodiceSolidale';
+export const siteName = 'Act4good';
 export const siteDescription =
   'Tecnologia open source al servizio delle comunità. Uniamo sviluppatori, maker e volontari per costruire progetti a impatto sociale.';
 export const siteType = 'Organization'; // schema
@@ -10,16 +10,16 @@ export const lang = 'it';
 export const skipContent = 'Vai al contenuto';
 // for the site content author, used in <head> meta and post h-card microformat
 export const author = {
-  name: 'CodiceSolidale',
+  name: 'Act4good',
   avatar: '/icon-512x512.png',
   fediverse: '',
   me: []
 };
 // for the site developer, used for footer credits and humans.txt info
 export const creator = {
-  name: 'CodiceSolidale',
-  email: 'info@codicesolidale.org',
-  website: 'https://www.codicesolidale.org',
+  name: 'Act4good',
+  email: 'act4good.org@gmail.coom',
+  website: 'http://act4good.org',
   social: ''
 };
 export const pathToSvgLogo = 'src/assets/svg/misc/logo.svg'; // used for favicon generation
@@ -28,11 +28,11 @@ export const themeLight = '#f8f8f8'; // used for meta tag theme-color, if light 
 export const themeDark = '#2e2e2e'; // used for meta tag theme-color, if dark colors are prefered. best use value set for dark bg
 export const opengraph_default = '/assets/images/template/opengraph-default.jpg'; // fallback/default meta image
 export const opengraph_default_alt =
-  'CodiceSolidale – Tecnologia open source al servizio delle comunità. Progetti digitali a impatto sociale realizzati da volontari.'; // alt text for default meta image
+  'Act4good – Tecnologia open source al servizio delle comunità. Progetti digitali a impatto sociale realizzati da volontari.'; // alt text for default meta image
 export const blog = {
   // RSS feed
-  name: 'Blog CodiceSolidale',
-  description: 'Aggiornamenti, storie di impatto e guide tecniche dalla community di CodiceSolidale.',
+  name: 'Blog Act4good',
+  description: 'Aggiornamenti, storie di impatto e guide tecniche dalla community di Act4good.',
   // feed links are looped over in the head. You may add more to the array.
   // feed links are looped over in the head. You may add more to the array.
   feedLinks: [
