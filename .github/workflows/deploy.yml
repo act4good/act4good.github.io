@@ -37,4 +37,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}   # it's automatically created by GitHub Actions each workflow run, no need to create it manually
           publish_dir: ./dist
-          #cname: act4good.org       # remove this line if not using a custom domain
+          cname: act4good.org       # remove this line if not using a custom domain
