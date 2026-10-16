@@ -18,6 +18,8 @@ A practical reference for adding pages, sections, components, translations, and 
 10. [How design tokens work](#10-how-design-tokens-work)
 11. [How the CSS pipeline works](#11-how-the-css-pipeline-works)
 12. [Common front matter fields reference](#12-common-front-matter-fields-reference)
+13. [How permalinks work](#13-how-permalinks-work)
+14. [How to build a listing page with pagination and client-side search](#14-how-to-build-a-listing-page-with-pagination-and-client-side-search)
 
 ---
 
@@ -42,6 +44,59 @@ Every page in Eleventy has access to data from multiple sources, merged in this 
 
 This means a value in a page's front matter always wins over a global default.
 
+### Global data (`src/_data/`)
+
+Every file in `src/_data/` is loaded automatically and exposed to **all** templates (layouts, partials, pages) as a global variable. No import or configuration is needed. The input folder is `src` (see `eleventy.config.js`), so Eleventy reads `src/_data/`.
+
+**The variable name is the file name without extension.**
+
+| File | Variable in templates |
+|---|---|
+| `src/_data/navigation.js` | `navigation` |
+| `src/_data/meta.js` | `meta` |
+| `src/_data/personal.yaml` | `personal` |
+| `src/_data/helpers.js` | `helpers` |
+| `src/_data/translations/it.js` | `translations.it` (subfolders become nested objects) |
+
+How the content of a JS file is exposed:
+
+- **`export default`**: the exported value becomes the variable. Example: `navigation.js` → `navigation.top`, `navigation.bottom`.
+- **Named exports only** (no `export default`): Eleventy collects them into one object named after the file. Example: in `meta.js`, `export const easteregg = true;` is available as `meta.easteregg`, **not** as `easteregg`. Likewise `meta.navigation.ariaBottom` (a named export of `meta.js`) is different from `navigation` (the file `navigation.js`).
+- **Both default and named exports**: only the default is used; named exports are ignored.
+- **No export**: nothing is exposed. Variables and functions inside the file stay private to the module.
+
+JSON and YAML files work the same way (file name → variable name).
+
+Global data has the **lowest priority** in the cascade: front matter and directory data files (e.g. `it.json`) override it. For example, `lang` set in `src/pages/it/it.json` is read as `lang`, while the global value is read as `meta.lang`; the two do not overwrite each other. Templates in this project use `lang or meta.lang` to fall back to the global value.
+
+`page` (current page info such as `page.url`) is not part of `_data/`: it is provided by Eleventy itself.
+
+### Data that does not come from `src/_data/`
+
+Some variables used in templates are not defined in `_data/`. Do not look for a file with that name.
+
+**Supplied by Eleventy**
+
+| Variable | Content |
+|---|---|
+| `page` | Current page info: `url`, `fileSlug`, `inputPath`, `outputPath`, `date`. |
+| `collections` | All collections: `collections.all`, `collections.allPosts`, tag collections, and those defined in `src/_config/collections.js`. |
+| `eleventy` | Build info: `eleventy.version`, `eleventy.generator`, `eleventy.env`, `eleventy.directories`. |
+| `pkg` | Contents of `package.json`. Used in the footer (`pkg.version`) and in `edit-on.njk` (`pkg.repository.url`). |
+| `content` | Already rendered HTML of the page, available in layouts: `{{ content | safe }}`. |
+
+**Reserved keys**
+
+When set in front matter, directory data files (e.g. `it.json`) or `_data/`, these keys configure Eleventy itself: `layout`, `permalink`, `tags`, `date`, `eleventyExcludeFromCollections`, `eleventyComputed`, `eleventyNavigation`, `pagination`.
+
+**Added via configuration**
+
+`eleventyConfig.addGlobalData()` creates global data without a file in `_data/`. This project uses it in `src/_config/plugins/drafts.js` to set `eleventyComputed.permalink` and `eleventyComputed.eleventyExcludeFromCollections`.
+
+**Filters and shortcodes (not data)**
+
+`{% year %}`, `{% svg %}` and `| slugify` are defined in `src/_config/` and use a different syntax from variables.
+
 ---
 
 ## 2. Project structure explained
@@ -59,8 +114,10 @@ src/
 ├── _layouts/       Page layouts (base.njk, page.njk, post.njk, tags.njk)
 ├── assets/         Static assets (CSS source, fonts, images, SVGs)
 ├── common/         Site-wide files (sitemap, robots.txt, RSS feed, 404)
-├── content/        Multilingual content (it/, en/)
-├── pages/          Language-neutral utility pages
+├── pages/          All site pages
+│   ├── it/         Italian pages (+ it.json data file)
+│   ├── en/         English pages (+ en.json data file)
+│   └── *.md|njk    Language-neutral pages (privacy, accessibility, blog...)
 └── posts/          Blog posts
 ```
 
@@ -72,11 +129,11 @@ src/
 
 ### Simple content page (Markdown)
 
-1. Create the file in the appropriate content folder:
+1. Create the file in the appropriate language folder:
 
 ```
-src/content/it/my-new-page.md
-src/content/en/my-new-page.md
+src/pages/it/my-new-page.md
+src/pages/en/my-new-page.md
 ```
 
 2. Add front matter at the top:
@@ -95,12 +152,15 @@ The `permalink` is set automatically by the language directory data file (`it.js
 - Italian page → `/it/my-new-page/`
 - English page → `/en/my-new-page/`
 
+For a **language-neutral page** (same URL for every language, e.g. privacy), create
+the file directly in `src/pages/` and set an explicit `permalink` (see §13).
+
 ### Page with template logic (Nunjucks)
 
 Use `.njk` instead of `.md` when you need loops, conditionals, or include other partials:
 
 ```
-src/content/it/projects.njk
+src/pages/it/progetti.njk
 ```
 
 ```njk
@@ -314,10 +374,10 @@ export default [
 ];
 ```
 
-2. **Create the content folder** and directory data file:
+2. **Create the language folder** and directory data file:
 
 ```
-src/content/fr/fr.json
+src/pages/fr/fr.json
 ```
 
 ```json
@@ -339,8 +399,8 @@ Copy the structure from `it.js` and translate all values.
 4. **Add content pages**:
 
 ```
-src/content/fr/index.md
-src/content/fr/about.md
+src/pages/fr/index.md
+src/pages/fr/about.md
 ```
 
 ---
@@ -504,7 +564,7 @@ Use design token utility classes rather than raw Tailwind defaults:
 | `layout` | string | Layout alias: `base`, `page`, `post` |
 | `title` | string | Page title (shown in `<title>` and `<h1>`) |
 | `description` | string | Meta description for SEO |
-| `permalink` | string | Override the generated URL |
+| `permalink` | string | Override the generated URL (see §13) |
 | `date` | date | Publication date (posts only, YYYY-MM-DD) |
 | `tags` | array | Topic tags; `posts` tag adds to the blog collection |
 | `draft` | boolean | `true` hides from production build |
@@ -523,3 +583,499 @@ base.njk      ← full HTML document (<html>, <head>, <body>)
 ```
 
 Always choose the most specific layout. Use `page` for standard content pages and `post` only for blog posts.
+
+---
+
+## 13. How permalinks work
+
+### Default behaviour
+
+Without a `permalink`, Eleventy builds the URL from the file path relative to
+the input folder (`src`). The `pages/` folder therefore becomes part of the URL:
+
+| File | URL without `permalink` |
+|---|---|
+| `src/pages/accessibility.md` | `/pages/accessibility/` |
+| `src/pages/it/progetti.njk` | `/pages/it/progetti/` |
+
+### How this project avoids the `/pages/` prefix
+
+**Language pages (`src/pages/it/`, `src/pages/en/`)**
+The directory data files `it.json` and `en.json` set the permalink for every
+page in the folder:
+
+```json
+{ "permalink": "/it/{{ page.fileSlug }}/" }
+```
+
+`page.fileSlug` is the file name without extension (`progetti.njk` becomes
+`progetti`, so the URL is `/it/progetti/`). No `permalink` is needed in the
+individual files, except for the home page (`permalink: /it/`).
+
+**Language-neutral pages (directly in `src/pages/`)**
+Each file declares an explicit permalink:
+
+```yaml
+---
+title: Accessibility Statement
+permalink: /accessibility/index.html
+layout: page
+---
+```
+
+### `/accessibility/index.html` vs `/accessibility/`
+
+The two forms are equivalent. When a permalink ends with `/`, Eleventy appends
+`index.html` automatically, so the output file and `page.url` are identical:
+
+| Permalink | File in `dist/` | `page.url` |
+|---|---|---|
+| `/accessibility/index.html` | `dist/accessibility/index.html` | `/accessibility/` |
+| `/accessibility/` | `dist/accessibility/index.html` | `/accessibility/` |
+| `/index.html` | `dist/index.html` | `/` |
+| `/` | `dist/index.html` | `/` |
+
+There is no SEO difference: browsers, search engines and hosting (GitHub Pages
+included) treat `/accessibility/` and `/accessibility/index.html` as the same
+resource. The long form is only a convention of the original template.
+
+**Do not omit the trailing slash** (`permalink: /accessibility`): Eleventy would
+write a file named `accessibility` without extension, which many servers deliver
+as a download instead of a page.
+
+### Alternative: one data file for the whole folder
+
+Instead of repeating the permalink in every file, create `src/pages/pages.json`:
+
+```json
+{ "permalink": "/{{ page.fileSlug }}/" }
+```
+
+Then `permalink` can be removed from `accessibility.md`, `privacy.md`, etc., and
+the URL stays `/accessibility/`.
+
+This data file also applies to the subfolders `it/` and `en/`. Their own
+`it.json` / `en.json` are more specific and win, so `/it/...` and `/en/...`
+do not change.
+
+### Pages that need an explicit permalink anyway
+
+| File | Reason |
+|---|---|
+| `pages/index.njk` | `fileSlug` would give `/index/` instead of `/` |
+| `pages/blog.njk` | The permalink contains the pagination logic |
+| `pages/it/index.njk`, `pages/en/index.njk` | `/it/` and `/en/` instead of `/it/index/` |
+
+### Priority order (highest first)
+
+1. Front matter of the file
+2. Directory data file closest to the file (`it.json`)
+3. Directory data files in parent folders (`pages.json`)
+4. Global data (`src/_data/`)
+
+A `permalink` in the file's front matter always wins over the cascade.
+
+### Checklist
+
+- URLs in `src/_data/navigation.js` must match the generated permalinks exactly
+  (a mismatch gives a 404). Example: the footer link `/legal/` requires
+  `permalink: /legal/index.html` in `pages/legal.md`.
+- After changing permalinks, run `npm run build` and check the structure of `dist/`.
+
+---
+
+## 14. How to build a listing page with pagination and client-side search
+
+Goal: a page like the blog (cards + numbered pagination) with an extra search box
+that filters **all** items in the browser. The example below builds a
+"worldwide" section, in two languages. Rename `worldwide` as needed.
+
+### 14.1 The big picture
+
+Eleventy is a static generator: everything is computed **at build time**, except
+the search, which runs in the browser.
+
+```mermaid
+flowchart TD
+    subgraph BUILD["Build time (Eleventy)"]
+        A["src/worldwide/it/*.md<br/>one file per item"] -->|"it.json: layout, permalink"| B["Detail pages<br/>/it/worldwide/titolo/"]
+        A -->|"getFilteredByGlob()<br/>collections.js"| C["collections.worldwideIt<br/>(array of ALL items)"]
+        C -->|"pagination: size 9"| D["pages/it/worldwide.njk<br/>rendered N times"]
+        D --> E["/it/worldwide/<br/>/it/worldwide/pagina-2/ ..."]
+        C -->|"loop + dump"| F["/it/worldwide/search-index.json<br/>(ALL items, compact)"]
+    end
+    subgraph BROWSER["Browser (client side)"]
+        E -->|"user types in search box"| G["worldwide-search.js"]
+        G -->|"fetch once"| F
+        G -->|"filters, hides list + pagination,<br/>shows results"| H["Result cards"]
+    end
+```
+
+Why two outputs from the same collection:
+
+- **Pagination** only knows the 9 items of the current page. It cannot search the others.
+- **`search-index.json`** contains every item, so the search works across all pages.
+- Without JavaScript the search box stays hidden and the paginated pages still work
+  (progressive enhancement).
+
+> **Pagination lives in the page, not in the layout.** The `pagination:` block must be in
+> the front matter of the page that is repeated (`pages/it/worldwide.njk`, exactly like
+> `pages/blog.njk`). Layouts only wrap content; they cannot generate pages.
+
+### 14.2 Where to add what
+
+```
+src/
+├── worldwide/                          [NEW] content: one .md per item
+│   ├── it/
+│   │   ├── it.json                     [NEW] data cascade for items (layout, permalink)
+│   │   └── my-item.md
+│   └── en/
+│       ├── en.json
+│       └── my-item.md
+├── pages/
+│   ├── it/worldwide.njk               [NEW] list page: pagination + search box
+│   └── en/worldwide.njk               [NEW]
+├── common/
+│   ├── worldwide-index-it.njk          [NEW] generates search-index.json (it)
+│   └── worldwide-index-en.njk          [NEW] (en)
+├── _layouts/
+│   └── worldwide.njk                   [NEW, optional] layout of a single item page
+├── _includes/
+│   └── partials/
+│       └── card-worldwide.njk          [NEW] card of one item (like card-blog.njk)
+├── assets/scripts/components/
+│   └── worldwide-search.js             [NEW] client-side search
+├── _config/
+│   └── collections.js                  [EDIT] add getWorldwide(lang)
+└── _data/
+    ├── meta.js                         [EDIT] pagination labels (worldwideIt / worldwideEn)
+    ├── navigation.js                   [EDIT] menu entry
+    └── translations/{it,en}.js         [EDIT] nav label
+
+eleventy.config.js                      [EDIT] register collections (+ layout alias)
+```
+
+### 14.3 Step by step
+
+#### Step 1 — The data: one Markdown file per item
+
+`src/worldwide/it/it.json` (applies to every item in the folder):
+
+```json
+{
+  "layout": "worldwide",
+  "lang": "it",
+  "locale": "it_IT",
+  "permalink": "/it/worldwide/{{ title | slugify }}/index.html"
+}
+```
+
+`src/worldwide/it/my-item.md`:
+
+```yaml
+---
+title: 'My item'
+description: 'Short text shown in the card and searched by the search box.'
+date: 2026-10-01
+tags:
+  - guide
+---
+
+Full content of the item (shown on its own page).
+```
+
+Never use the tags `posts`, `docs`, `all`: they are reserved (see `tagList` in
+`collections.js`). `title`, `description` and `tags` are the fields the search indexes.
+
+#### Step 2 — The collection (`src/_config/collections.js`)
+
+```js
+/** All worldwide items of one language, newest first. */
+export const getWorldwide = lang => collection =>
+  collection.getFilteredByGlob(`./src/worldwide/${lang}/**/*.md`).reverse();
+```
+
+`getFilteredByGlob()` is a built-in method of the `collection` object that Eleventy
+passes to your function; `getWorldwide` is yours. Register it in `eleventy.config.js`:
+
+```js
+import {getAllPosts, getWorldwide, showInSitemap, tagList} from './src/_config/collections.js';
+
+eleventyConfig.addCollection('worldwideIt', getWorldwide('it'));
+eleventyConfig.addCollection('worldwideEn', getWorldwide('en'));
+
+// only if you create the optional layout:
+eleventyConfig.addLayoutAlias('worldwide', 'worldwide.njk');
+```
+
+The collection is now available in every template as `collections.worldwideIt`.
+
+#### Step 3 — The card partial (`src/_includes/partials/card-worldwide.njk`)
+
+Copy `card-blog.njk` and adapt it. The loop variable is `item`:
+
+```njk
+<custom-card clickable>
+  <h2 slot="headline" class="text-step-2"><a href="{{ item.url | url }}">{{ item.data.title }}</a></h2>
+  <div slot="content" webc:nokeep>{{ item.data.description | markdownFormat | safe }}</div>
+</custom-card>
+
+{% css "local" %}
+  {% include "css/custom-card.css" %}
+{% endcss %}
+```
+
+#### Step 4 — The list page with pagination (`src/pages/it/worldwide.njk`)
+
+```njk
+---
+layout: base
+title: Worldwide
+description: 'Elenco worldwide.'
+pagination:
+  data: collections.worldwideIt      # 1. the array to split
+  size: 9                            # 2. items per page
+permalink: '/it/worldwide/{% if pagination.pageNumber >= 1 %}pagina-{{ pagination.pageNumber + 1 }}/{% endif %}index.html'
+---
+
+<div class="wrapper">
+  <h1>{{ title }}</h1>
+
+  {# search box: hidden until the JS enables it #}
+  <form role="search" data-search hidden
+        data-index="/it/worldwide/search-index.json"
+        data-label-results="risultati">
+    <label for="worldwide-q">Cerca</label>
+    <input id="worldwide-q" type="search" autocomplete="off">
+    <p data-status role="status" aria-live="polite"></p>
+  </form>
+
+  {# 3. only the items of the current page: pagination.items #}
+  <custom-masonry layout="50-50" data-list>
+    {% asyncEach item in pagination.items %}
+      {% include "partials/card-worldwide.njk" %}
+    {% endeach %}
+  </custom-masonry>
+
+  {# search results, filled by the JS #}
+  <div class="grid" data-results hidden></div>
+  <template data-result-template>
+    {# paste here the HTML of one card as generated in dist/ (see notes below) #}
+    <custom-card class="flow no-indicator" clickable>
+      <h2 class="text-step-2"><a data-title href="#"></a></h2>
+      <p data-description></p>
+    </custom-card>
+  </template>
+
+  {# 4. pagination links, same partial as the blog #}
+  {% set collectionToPaginate = collections.worldwideIt %}
+  {% set metaKey = "worldwideIt" %}
+  {% if collectionToPaginate.length > pagination.size %}
+    <div data-pager>{% include 'partials/pagination.njk' %}</div>
+  {% endif %}
+</div>
+
+<script type="module" src="/assets/scripts/components/worldwide-search.js"></script>
+```
+
+The English page `src/pages/en/worldwide.njk` is identical, with `collections.worldwideEn`,
+`metaKey = "worldwideEn"`, `/en/worldwide/...` permalinks and English texts.
+
+How pagination works here (same as `pages/blog.njk`):
+
+1. Eleventy reads `collections.worldwideIt` (e.g. 25 items) and splits it into chunks of 9.
+2. It renders the **same template 3 times**, once per chunk. In each run `pagination.items`
+   holds that chunk and `pagination.pageNumber` is 0, 1, 2.
+3. The `permalink` uses `pageNumber` to produce `/it/worldwide/`, `/it/worldwide/pagina-2/`,
+   `/it/worldwide/pagina-3/`. This permalink overrides the one of `it.json`.
+4. `partials/pagination.njk` builds the Previous / 1 2 3 / Next links from
+   `pagination.href` and `pagination.hrefs`, and reads its labels from `meta[metaKey]`.
+
+Pagination labels in `src/_data/meta.js`: add one object per language with the same shape
+as the existing `blog` object, so `pagination.njk` can be reused unchanged:
+
+```js
+export const worldwideIt = {
+  paginationLabel: 'Worldwide',
+  paginationPage: 'Pagina',
+  paginationPrevious: 'Precedente',
+  paginationNext: 'Successivo',
+  paginationNumbers: true
+};
+export const worldwideEn = {
+  paginationLabel: 'Worldwide',
+  paginationPage: 'Page',
+  paginationPrevious: 'Previous',
+  paginationNext: 'Next',
+  paginationNumbers: true
+};
+```
+
+#### Step 5 — The search index (`src/common/worldwide-index-it.njk`)
+
+A template that outputs a JSON file with **all** items:
+
+```njk
+---
+permalink: /it/worldwide/search-index.json
+eleventyExcludeFromCollections: true
+excludeFromSitemap: true
+---
+[
+{%- for r in collections.worldwideIt %}
+  {"title": {{ r.data.title | dump | safe }}, "description": {{ r.data.description | dump | safe }}, "url": {{ r.url | dump | safe }}, "tags": {{ (r.data.tags or []) | dump | safe }}}{% if not loop.last %},{% endif %}
+{%- endfor %}
+]
+```
+
+`dump` is the Nunjucks filter that runs `JSON.stringify`, so quotes and accents are
+escaped correctly. Duplicate the file for English (`collections.worldwideEn`,
+`/en/worldwide/search-index.json`). Keep the index small: only the fields you search,
+not the full body.
+
+#### Step 6 — The client-side search (`src/assets/scripts/components/worldwide-search.js`)
+
+Files in `src/assets/scripts/components/` are bundled by `build-js.js` (esbuild) and
+copied to `dist/assets/scripts/components/`, so the script is served at
+`/assets/scripts/components/worldwide-search.js`.
+
+```js
+const form = document.querySelector('[data-search]');
+
+if (form) {
+  const input = form.querySelector('input[type="search"]');
+  const status = form.querySelector('[data-status]');
+  const list = document.querySelector('[data-list]');
+  const pager = document.querySelector('[data-pager]');
+  const results = document.querySelector('[data-results]');
+  const template = document.querySelector('[data-result-template]');
+  let index = null;
+
+  // lowercase + remove accents, so "perche" also finds "perché"
+  const normalize = text => text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+  const loadIndex = async () => {
+    if (!index) {
+      const response = await fetch(form.dataset.index); // downloaded once, on first search
+      const items = await response.json();
+      index = items.map(item => ({
+        ...item,
+        haystack: normalize([item.title, item.description, ...item.tags].join(' '))
+      }));
+    }
+    return index;
+  };
+
+  const render = items => {
+    results.replaceChildren(
+      ...items.map(item => {
+        const card = template.content.cloneNode(true);
+        const link = card.querySelector('[data-title]');
+        link.textContent = item.title; // textContent, never innerHTML: avoids XSS
+        link.href = item.url;
+        card.querySelector('[data-description]').textContent = item.description;
+        return card;
+      })
+    );
+  };
+
+  const search = async () => {
+    const query = normalize(input.value.trim());
+    const active = query.length > 0;
+
+    list.hidden = active; // hide the paginated list ...
+    if (pager) pager.hidden = active; // ... and its pagination
+    results.hidden = !active; // show the results instead
+
+    if (!active) {
+      status.textContent = '';
+      return;
+    }
+
+    const terms = query.split(/\s+/);
+    const found = (await loadIndex()).filter(item => terms.every(term => item.haystack.includes(term)));
+    render(found);
+    status.textContent = `${found.length} ${form.dataset.labelResults}`;
+  };
+
+  let timer;
+  input.addEventListener('input', () => {
+    clearTimeout(timer);
+    timer = setTimeout(search, 150); // debounce
+  });
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    search();
+  });
+
+  form.hidden = false; // JS is running: show the search box
+}
+```
+
+Notes:
+
+- The card inside `<template data-result-template>` must reproduce the HTML that
+  `card-worldwide.njk` generates. Build once, open a card in `dist/it/worldwide/index.html`
+  and copy its markup, replacing title, link and description with the `data-*` hooks.
+- If a hidden element stays visible, a CSS rule such as `.grid { display: grid }` is
+  overriding the `hidden` attribute. Add `[hidden] { display: none !important; }` to the
+  relevant CSS.
+- All terms must match (`every`): typing `guida open` finds items containing both words.
+
+#### Step 7 — Menu and translations
+
+`src/_data/navigation.js`:
+
+```js
+{ key: 'worldwide', urls: { it: '/it/worldwide/', en: '/en/worldwide/' } }
+```
+
+`src/_data/translations/it.js` (and the same key in `en.js`):
+
+```js
+nav: { /* ... */ worldwide: 'Worldwide' }
+```
+
+All `nav.*` keys must exist in every translation file.
+
+#### Step 8 — Optional layout for the single item (`src/_layouts/worldwide.njk`)
+
+The item pages (`/it/worldwide/my-item/`) can use `layout: page` directly. Create a
+dedicated layout only if they need their own structure (date, tags, back link):
+
+```njk
+---
+layout: base
+---
+<article class="wrapper prose flow region">
+  <h1>{{ title }}</h1>
+  {{ content | safe }}
+  <p><a href="/{{ lang }}/worldwide/">&larr;</a></p>
+</article>
+```
+
+Then set `"layout": "worldwide"` in `worldwide/{lang}/{lang}.json` and register the alias
+in `eleventy.config.js`.
+
+### 14.4 What happens, and when
+
+| Moment | What happens | Who |
+|---|---|---|
+| `npm run build` | Reads `worldwide/it/*.md`, builds `collections.worldwideIt` | Eleventy + `getWorldwide` |
+| `npm run build` | Renders `worldwide.njk` once per chunk of 9 items | Eleventy pagination |
+| `npm run build` | Writes `search-index.json` with all items | `worldwide-index-it.njk` |
+| User opens `/it/worldwide/` | Sees items 1–9 and the pagination links | Browser, no JS needed |
+| User types in the search box | Downloads `search-index.json` once, filters in memory | `worldwide-search.js` |
+| Query not empty | Paginated list and links hidden, matching cards shown | `worldwide-search.js` |
+| Query emptied | Paginated list and links shown again | `worldwide-search.js` |
+
+### 14.5 Checklist
+
+- [ ] `it.json` / `en.json` in `src/worldwide/{lang}/` with `permalink` and `layout`
+- [ ] `getWorldwide` exported in `collections.js` **and** registered in `eleventy.config.js`
+- [ ] `meta.js` exports `worldwideIt` / `worldwideEn` and the page sets the same `metaKey`
+- [ ] `search-index.json` permalink matches the `data-index` attribute of the form
+- [ ] Menu URLs in `navigation.js` match the page permalinks exactly
+- [ ] `npm run build`, then check `dist/it/worldwide/`, `dist/it/worldwide/pagina-2/` and `dist/it/worldwide/search-index.json`
+- [ ] `npm run test:a11y`: the search box needs a visible `<label>` and an `aria-live` status

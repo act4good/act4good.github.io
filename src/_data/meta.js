@@ -86,7 +86,7 @@ export const greenweb = {
   disclosures: [
     {
       docType: 'sustainability-page',
-      url: `${url}/sustainability/`,
+      url: `${url}/it/sostenibilita/`,
       domain: domain
     }
   ],
@@ -95,7 +95,7 @@ export const greenweb = {
 export const tests = {
   pa11y: {
     // keep customPaths empty if you want to test all pages
-    customPaths: ['/', '/about/', '/blog/', '/styleguide/'],
+    customPaths: ['/', '/it/', '/en/', '/it/chi-siamo/', '/en/about/', '/blog/', '/styleguide/'],
     globalIgnore: []
   }
 };

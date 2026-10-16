@@ -10,10 +10,11 @@
         {% set t = translations[lang or meta.lang] %}
         {% for item in navigation.bottom %}
           <a
-            href="{{ item.url }}"
+            href="{{ item.urls[lang or meta.lang] if item.urls else item.url }}"
             {{
-              helpers.getLinkActiveState(item.url,
-              page.url)
+              helpers.getLinkActiveState(
+                item.urls[lang or meta.lang] if item.urls else item.url,
+                page.url)
               |
               safe
             }}

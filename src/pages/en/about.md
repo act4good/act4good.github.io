@@ -74,3 +74,6 @@ Have an idea? Want to propose a project? Just want to learn more?
 🐙 Explore our repositories on [GitHub](https://github.com/codicesolidale)
 
 👥 [Join the community →](/en/join/)
+
+
+<div><custom-youtube @slug="JqnMI1AXl6w" @label="Andy Bell – Be the browser’s mentor, not its micromanager"> </custom-youtube></div>

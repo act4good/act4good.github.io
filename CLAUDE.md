@@ -110,17 +110,31 @@ src/
 │   ├── 404.md
 │   └── ...
 │
-├── content/                  # ── MULTILINGUAL CONTENT ──────────────────────
-│   ├── it/
+├── pages/                    # ALL site pages
+│   ├── it/                   # ── MULTILINGUAL CONTENT ──────────────────────
 │   │   ├── it.json           # Data cascade: lang=it, permalink=/it/{{slug}}/
-│   │   ├── index.md          # Italian homepage content
-│   │   └── about.md
-│   └── en/
-│       ├── en.json           # Data cascade: lang=en, permalink=/en/{{slug}}/
-│       ├── index.md
-│       └── about.md
-│
-├── pages/                    # Utility/structural pages (language-neutral)
+│   │   ├── index.njk         # Italian homepage
+│   │   ├── progetti.njk
+│   │   ├── unisciti.md
+│   │   ├── chi-siamo.md
+│   │   ├── privacy.md
+│   │   ├── accessibilita.md
+│   │   ├── note-legali.md
+│   │   ├── sostenibilita.md
+│   │   └── realizzato-con.njk
+│   ├── en/
+│   │   ├── en.json           # Data cascade: lang=en, permalink=/en/{{slug}}/
+│   │   ├── index.njk
+│   │   ├── projects.njk
+│   │   ├── join.md
+│   │   ├── about.md
+│   │   ├── privacy.md
+│   │   ├── accessibility.md
+│   │   ├── legal.md
+│   │   ├── sustainability.md
+│   │   └── built-with.njk
+│   └── *.md, *.njk           # Language-neutral pages (blog, get-started, styleguide)
+│                             # — each with an explicit permalink
 │
 └── posts/                    # Blog posts
     ├── posts.json
@@ -175,7 +189,7 @@ Examples: `meta-info.njk`, `schema.njk`, `css-inline.njk`
 
 ## Strategy
 
-- Content organized by language under `src/content/{lang}/`
+- Content organized by language under `src/pages/{lang}/`
 - Each language folder has a directory data file (`{lang}.json`) that sets
   `lang`, `locale`, and the `permalink` prefix for all pages in that folder
 - UI strings (nav labels, buttons, stats) live in `src/_data/translations/{lang}.js`
@@ -216,7 +230,7 @@ export default [
 ];
 ```
 
-## Directory Data File (`src/content/it/it.json`)
+## Directory Data File (`src/pages/it/it.json`)
 
 ```json
 {
@@ -241,10 +255,23 @@ export default {
 };
 ```
 
+## Permalinks
+
+Without a `permalink`, Eleventy builds the URL from the file path relative to
+`src/`, so `src/pages/privacy.md` would become `/pages/privacy/`.
+
+- Pages in `src/pages/{lang}/` get their permalink from `{lang}.json`
+  (`/{lang}/{{ page.fileSlug }}/`); only the home page sets `permalink: /{lang}/`.
+- Language-neutral pages directly in `src/pages/` declare an explicit `permalink`
+  in front matter (e.g. `/privacy/index.html`).
+- URLs in `navigation.js` must match the generated permalinks exactly.
+
+See `docs/HOW-ELEVENTY-WORKS.md` §13 for details.
+
 ## Adding a New Language
 
 1. Add entry to `src/_data/languages.js`
-2. Create `src/content/{lang}/` with `{lang}.json` data file
+2. Create `src/pages/{lang}/` with `{lang}.json` data file
 3. Add `src/_data/translations/{lang}.js`
 4. Translate content pages
 

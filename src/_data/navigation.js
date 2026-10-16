@@ -20,15 +20,15 @@ export default {
   bottom: [
     {
       key: 'privacy',
-      url: '/privacy/'
+      urls: { it: '/it/privacy/', en: '/en/privacy/' }
     },
     {
       key: 'accessibility',
-      url: '/accessibility/'
+      urls: { it: '/it/accessibilita/', en: '/en/accessibility/' }
     },
     {
       key: 'legal',
-      url: '/legal/'
+      urls: { it: '/it/note-legali/', en: '/en/legal/' }
     }
   ]
 };
