@@ -217,7 +217,7 @@
 
       <url>
         <loc>http://localhost:8080/tags/case-study/</loc>
-        <lastmod>2026-08-13T14:44:53.846Z</lastmod>
+        <lastmod>2026-10-19T06:15:49.491Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -230,7 +230,66 @@
 
       <url>
         <loc>http://localhost:8080/tags/</loc>
-        <lastmod>2026-08-13T14:44:53.846Z</lastmod>
+        <lastmod>2026-10-19T06:15:49.491Z</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+
+      
+        
+      
+
+      <url>
+        <loc>http://localhost:8080/blog/</loc>
+        <lastmod>2026-10-19T06:15:49.492Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -243,7 +302,33 @@
 
       <url>
         <loc>http://localhost:8080/en/about/</loc>
-        <lastmod>2026-08-13T14:44:53.846Z</lastmod>
+        <lastmod>2026-10-19T06:15:49.493Z</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    
+  
+    
+
+      
+        
+      
+
+      <url>
+        <loc>http://localhost:8080/en/accessibility/</loc>
+        <lastmod>2026-10-19T06:15:49.493Z</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    
+  
+    
+
+      
+        
+      
+
+      <url>
+        <loc>http://localhost:8080/en/built-with/</loc>
+        <lastmod>2026-10-19T06:15:49.493Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -256,7 +341,7 @@
 
       <url>
         <loc>http://localhost:8080/en/</loc>
-        <lastmod>2026-08-13T14:44:53.846Z</lastmod>
+        <lastmod>2026-10-19T06:15:49.493Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -269,7 +354,33 @@
 
       <url>
         <loc>http://localhost:8080/en/join/</loc>
-        <lastmod>2026-08-13T14:44:53.846Z</lastmod>
+        <lastmod>2026-10-19T06:15:49.493Z</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    
+  
+    
+
+      
+        
+      
+
+      <url>
+        <loc>http://localhost:8080/en/legal/</loc>
+        <lastmod>2026-10-19T06:15:49.493Z</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    
+  
+    
+
+      
+        
+      
+
+      <url>
+        <loc>http://localhost:8080/en/privacy/</loc>
+        <lastmod>2026-10-19T06:15:49.493Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -282,157 +393,7 @@
 
       <url>
         <loc>http://localhost:8080/en/projects/</loc>
-        <lastmod>2026-08-13T14:44:53.846Z</lastmod>
-        <changefreq>monthly</changefreq>
-    </url>
-    
-  
-    
-
-      
-        
-      
-
-      <url>
-        <loc>http://localhost:8080/it/chi-siamo/</loc>
-        <lastmod>2026-08-13T14:44:53.846Z</lastmod>
-        <changefreq>monthly</changefreq>
-    </url>
-    
-  
-    
-
-      
-        
-      
-
-      <url>
-        <loc>http://localhost:8080/it/</loc>
-        <lastmod>2026-08-13T14:44:53.846Z</lastmod>
-        <changefreq>monthly</changefreq>
-    </url>
-    
-  
-    
-
-      
-        
-      
-
-      <url>
-        <loc>http://localhost:8080/it/progetti/</loc>
-        <lastmod>2026-08-13T14:44:53.847Z</lastmod>
-        <changefreq>monthly</changefreq>
-    </url>
-    
-  
-    
-
-      
-        
-      
-
-      <url>
-        <loc>http://localhost:8080/it/unisciti/</loc>
-        <lastmod>2026-08-13T14:44:53.847Z</lastmod>
-        <changefreq>monthly</changefreq>
-    </url>
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-
-      
-        
-      
-
-      <url>
-        <loc>http://localhost:8080/about/</loc>
-        <lastmod>2026-08-13T14:44:53.847Z</lastmod>
-        <changefreq>monthly</changefreq>
-    </url>
-    
-  
-    
-
-      
-        
-      
-
-      <url>
-        <loc>http://localhost:8080/accessibility/</loc>
-        <lastmod>2026-08-13T14:44:53.848Z</lastmod>
-        <changefreq>monthly</changefreq>
-    </url>
-    
-  
-    
-
-      
-        
-      
-
-      <url>
-        <loc>http://localhost:8080/blog/</loc>
-        <lastmod>2026-08-13T14:44:53.848Z</lastmod>
-        <changefreq>monthly</changefreq>
-    </url>
-    
-  
-    
-
-      
-        
-      
-
-      <url>
-        <loc>http://localhost:8080/built-with/</loc>
-        <lastmod>2026-08-13T14:44:53.848Z</lastmod>
+        <lastmod>2026-10-19T06:15:49.493Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -445,7 +406,7 @@
 
       <url>
         <loc>http://localhost:8080/get-started/</loc>
-        <lastmod>2026-08-13T14:44:53.848Z</lastmod>
+        <lastmod>2026-10-19T06:15:49.493Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -457,8 +418,8 @@
       
 
       <url>
-        <loc>http://localhost:8080/imprint/</loc>
-        <lastmod>2026-08-13T14:44:53.848Z</lastmod>
+        <loc>http://localhost:8080/it/accessibilita/</loc>
+        <lastmod>2026-10-19T06:15:49.493Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -470,8 +431,86 @@
       
 
       <url>
-        <loc>http://localhost:8080/privacy/</loc>
-        <lastmod>2026-08-13T14:44:53.848Z</lastmod>
+        <loc>http://localhost:8080/it/chi-siamo/</loc>
+        <lastmod>2026-10-19T06:15:49.493Z</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    
+  
+    
+
+      
+        
+      
+
+      <url>
+        <loc>http://localhost:8080/it/</loc>
+        <lastmod>2026-10-19T06:15:49.493Z</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    
+  
+    
+
+      
+        
+      
+
+      <url>
+        <loc>http://localhost:8080/it/note-legali/</loc>
+        <lastmod>2026-10-19T06:15:49.493Z</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    
+  
+    
+
+      
+        
+      
+
+      <url>
+        <loc>http://localhost:8080/it/privacy/</loc>
+        <lastmod>2026-10-19T06:15:49.493Z</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    
+  
+    
+
+      
+        
+      
+
+      <url>
+        <loc>http://localhost:8080/it/progetti/</loc>
+        <lastmod>2026-10-19T06:15:49.493Z</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    
+  
+    
+
+      
+        
+      
+
+      <url>
+        <loc>http://localhost:8080/it/realizzato-con/</loc>
+        <lastmod>2026-10-19T06:15:49.493Z</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    
+  
+    
+
+      
+        
+      
+
+      <url>
+        <loc>http://localhost:8080/it/unisciti/</loc>
+        <lastmod>2026-10-19T06:15:49.493Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
