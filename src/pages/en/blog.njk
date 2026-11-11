@@ -5,7 +5,7 @@ description: 'All blog posts can be found here'
 pagination:
   data: collections.allPosts
   size: 8
-permalink: 'blog/{% if pagination.pageNumber >=1 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html'
+permalink: '{{ lang }}/blog/{% if pagination.pageNumber >=1 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html'
 ---
 
 <div class="wrapper">
@@ -16,6 +16,11 @@ permalink: 'blog/{% if pagination.pageNumber >=1 %}page-{{ pagination.pageNumber
 
     {% svg "divider/edgy", null, "divider" %}
   </header>
+
+  <div class="region flow prose" style="--region-space-top: var(--space-xl-2xl)">
+    <p>English version</p>
+  </div>
+
 
   <div class="region flow prose" style="--region-space-top: var(--space-xl-2xl)">
     <p>This blog has a pagination of <strong>{{ pagination.size }}</strong> posts per page.<br>

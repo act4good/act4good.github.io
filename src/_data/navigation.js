@@ -14,7 +14,7 @@ export default {
     },
     {
       key: 'blog',
-      url: '/blog/'
+      urls: { it: '/it/blog/', en: '/en/blog/' }
     }
   ],
   bottom: [
