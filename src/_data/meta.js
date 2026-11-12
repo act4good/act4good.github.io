@@ -58,6 +58,21 @@ export const blog = {
   paginationNext: 'Successivo',
   paginationNumbers: true
 };
+// pagination labels per language: used by pages via metaKey = 'blog_' + lang
+export const blog_it = {
+  paginationLabel: 'Blog',
+  paginationPage: 'Pagina',
+  paginationPrevious: 'Precedente',
+  paginationNext: 'Successivo',
+  paginationNumbers: true
+};
+export const blog_en = {
+  paginationLabel: 'Blog',
+  paginationPage: 'Page',
+  paginationPrevious: 'Previous',
+  paginationNext: 'Next',
+  paginationNumbers: true
+};
 export const details = {
   aria: 'controlli sezione',
   expand: 'espandi tutto',
@@ -95,7 +110,7 @@ export const greenweb = {
 export const tests = {
   pa11y: {
     // keep customPaths empty if you want to test all pages
-    customPaths: ['/', '/it/', '/en/', '/it/chi-siamo/', '/en/about/', '/blog/', '/styleguide/'],
+    customPaths: ['/', '/it/', '/en/', '/it/chi-siamo/', '/en/about/', '/it/blog/', '/en/blog/', '/styleguide/'],
     globalIgnore: []
   }
 };

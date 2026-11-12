@@ -152,14 +152,14 @@ locale: en_GB
       <p>News, impact stories and guides from our community.</p>
       <div class="feature | region" style="--region-space: var(--space-l);">
         <custom-masonry layout="50-50">
-          {% set itemList = collections.allPosts %}
+          {% set itemList = collections['posts_' + lang] %}
           {% asyncEach item in itemList.slice(0, 4) %}
             {% set headingLevel = "h3" %}
             {% include "partials/card-blog.njk" %}
           {% endeach %}
         </custom-masonry>
       </div>
-      <p><a href="/blog/" class="button">All posts</a></p>
+      <p><a href="/en/blog/" class="button">All posts</a></p>
     </div>
   </section>
 

@@ -2,7 +2,7 @@
 title: Open Graph images
 ---
 
-You can see a [preview of the OG images in a blog post](/blog/open-graph-images/).
+You can see a [preview of the OG images in a blog post](/en/blog/open-graph-images/).
 
 They are referenced in `meta-info.njk`:
 

@@ -15,7 +15,8 @@ dotenv.config();
 import {load as yamlLoad} from 'js-yaml';
 
 //  config import
-import {getAllPosts, showInSitemap, tagList} from './src/_config/collections.js';
+import languages from './src/_data/languages.js';
+import {getAllPosts, getPosts, showInSitemap, tagList} from './src/_config/collections.js';
 import events from './src/_config/events.js';
 import filters from './src/_config/filters.js';
 import plugins from './src/_config/plugins.js';
@@ -40,6 +41,8 @@ export default async function (eleventyConfig) {
 
   //	---------------------  Collections
   eleventyConfig.addCollection('allPosts', getAllPosts);
+  // one collection per language: collections.posts_it, collections.posts_en, ...
+  languages.forEach(({code}) => eleventyConfig.addCollection(`posts_${code}`, getPosts(code)));
   eleventyConfig.addCollection('showInSitemap', showInSitemap);
   eleventyConfig.addCollection('tagList', tagList);
 

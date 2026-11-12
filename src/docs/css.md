@@ -40,7 +40,7 @@ We now use cascade layers! Up until now, I used the `:where()` pseudo-class to c
 
 ### Tailwind CSS
 
-You will find that Tailwind CSS does not work as you might expect here. I explain this in [one of the blog posts](/blog/what-is-tailwind-css-doing-here/).
+You will find that Tailwind CSS does not work as you might expect here. I explain this in [one of the blog posts](/en/blog/what-is-tailwind-css-doing-here/).
 
 If you are working with **VS Code** I recommend installing the [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) addon, as it works also for the custom utility classes.
 

@@ -21,7 +21,7 @@ Transforms any `<img>` or `<picture>` tags in HTML files as a post-processing st
 
 We can pass in overrides for every instance and use attributes. By default all images are set to be lazy loaded, but we can override this by directly setting `loading="eager"` and `decoding="sync" `on the `<img>` element.
 
-Another thing to note is the  `widths: ['auto']` setting, which by default only includes the original size image. We can set the dedicated `widths` to be used by adding `eleventy:widths="800,1200"` on the element. A single HTML `width` attribute (e.g. `width="400"`) is also treated as an alias for `eleventy:widths` when it is a valid integer. If both are set on the same element, Image gives `eleventy:widths` priority. For images with [Markdown syntax](/blog/post-with-an-image/#markdown-syntax), I set fixed `widths` so we don't need to set a value on every instance.
+Another thing to note is the  `widths: ['auto']` setting, which by default only includes the original size image. We can set the dedicated `widths` to be used by adding `eleventy:widths="800,1200"` on the element. A single HTML `width` attribute (e.g. `width="400"`) is also treated as an alias for `eleventy:widths` when it is a valid integer. If both are set on the same element, Image gives `eleventy:widths` priority. For images with [Markdown syntax](/en/blog/post-with-an-image/#markdown-syntax), I set fixed `widths` so we don't need to set a value on every instance.
 
 `sizes` defaults to `auto`, which is by default applied to all lazy loading images. See: https://github.com/whatwg/html/pull/8008. We can overwrite this with a normal `sizes` attribute, or, since [Image v7](https://github.com/11ty/image/releases/tag/v7.0.0), with `eleventy:sizes`, which also overrides any `sizes` set in the plugin config. Note:
 The `sizes` attribute is required if `widths` has more than one entry. No default value for is added for `sizes` for eagerly loaded images, so we need to set it explicitly.
@@ -98,7 +98,7 @@ We can pass in manually all the conditions, and add `null` to skip. The argument
 
 {% image "/assets/images/gallery/asturias-3.jpg", "A traditional Asturian village with it's raised granaries, surrounded by lush green hills and mountains", "An example for the positional parameters shortcode.", "lazy", "text-center", "grayscale", [200, 400], "(min-width:30em) 50vw, 100vw",  ['webp', 'jpeg'] %}
 
-**Example:** predefine `widths` and `sizes` using Nunjuck's `set` tag or front matter fields, and dynamically get the image path, like I do in the "[Built with](/blog/built-with/)" template.
+**Example:** predefine `widths` and `sizes` using Nunjuck's `set` tag or front matter fields, and dynamically get the image path, like I do in the "[Built with](/en/blog/built-with/)" template.
 
 {% raw %}
 

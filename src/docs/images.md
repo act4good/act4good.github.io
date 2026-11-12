@@ -2,7 +2,7 @@
 title: Images
 ---
 
-Using the [Eleventy Image](https://www.11ty.dev/docs/plugins/image/) plugin, there are three ways to handle image optimization: HTML Transform, Markdown syntax, and Nunjucks shortcodes. [See the dedicated blog post to dive (much) deeper.](/blog/post-with-an-image/)
+Using the [Eleventy Image](https://www.11ty.dev/docs/plugins/image/) plugin, there are three ways to handle image optimization: HTML Transform, Markdown syntax, and Nunjucks shortcodes. [See the dedicated blog post to dive (much) deeper.](/en/blog/post-with-an-image/)
 
 Have a look at the [Attribute Overrides](https://www.11ty.dev/docs/plugins/image/#attribute-overrides) for the HTML Transform methods (1 and 2) for per instance overrides. Adding `eleventy:ignore` to an `<img>` element for example, skips this image.
 
