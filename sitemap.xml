@@ -8,7 +8,7 @@
       
 
       <url>
-        <loc>http://localhost:8080/blog/post-with-fetched-content/</loc>
+        <loc>http://localhost:8080/en/blog/post-with-fetched-content/</loc>
         <lastmod>2022-08-28T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
@@ -21,7 +21,7 @@
       
 
       <url>
-        <loc>http://localhost:8080/blog/post-with-301-redirects/</loc>
+        <loc>http://localhost:8080/en/blog/post-with-301-redirects/</loc>
         <lastmod>2022-08-28T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
@@ -34,7 +34,7 @@
       
 
       <url>
-        <loc>http://localhost:8080/blog/post-with-some-code/</loc>
+        <loc>http://localhost:8080/en/blog/post-with-some-code/</loc>
         <lastmod>2022-09-01T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
@@ -47,7 +47,7 @@
       
 
       <url>
-        <loc>http://localhost:8080/blog/post-with-a-video/</loc>
+        <loc>http://localhost:8080/en/blog/post-with-a-video/</loc>
         <lastmod>2022-10-31T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
@@ -60,7 +60,7 @@
       
 
       <url>
-        <loc>http://localhost:8080/blog/post-with-all-the-markdown/</loc>
+        <loc>http://localhost:8080/en/blog/post-with-all-the-markdown/</loc>
         <lastmod>2022-11-02T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
@@ -73,7 +73,7 @@
       
 
       <url>
-        <loc>http://localhost:8080/blog/open-graph-images/</loc>
+        <loc>http://localhost:8080/en/blog/open-graph-images/</loc>
         <lastmod>2023-01-25T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
@@ -86,7 +86,7 @@
       
 
       <url>
-        <loc>http://localhost:8080/blog/demo-pages/</loc>
+        <loc>http://localhost:8080/en/blog/demo-pages/</loc>
         <lastmod>2023-10-30T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
@@ -99,7 +99,7 @@
       
 
       <url>
-        <loc>http://localhost:8080/blog/what-is-tailwind-css-doing-here/</loc>
+        <loc>http://localhost:8080/en/blog/what-is-tailwind-css-doing-here/</loc>
         <lastmod>2023-11-30T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
@@ -112,7 +112,7 @@
       
 
       <url>
-        <loc>http://localhost:8080/blog/post-with-a-gallery/</loc>
+        <loc>http://localhost:8080/en/blog/post-with-a-gallery/</loc>
         <lastmod>2024-01-30T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
@@ -125,7 +125,7 @@
       
 
       <url>
-        <loc>http://localhost:8080/blog/eleventy-excellent-20/</loc>
+        <loc>http://localhost:8080/en/blog/eleventy-excellent-20/</loc>
         <lastmod>2024-02-01T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
@@ -138,7 +138,7 @@
       
 
       <url>
-        <loc>http://localhost:8080/blog/eleventy-excellent-30/</loc>
+        <loc>http://localhost:8080/en/blog/eleventy-excellent-30/</loc>
         <lastmod>2024-06-03T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
@@ -151,7 +151,7 @@
       
 
       <url>
-        <loc>http://localhost:8080/blog/post-with-an-image/</loc>
+        <loc>http://localhost:8080/en/blog/post-with-an-image/</loc>
         <lastmod>2025-01-09T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
@@ -164,7 +164,7 @@
       
 
       <url>
-        <loc>http://localhost:8080/blog/eleventy-excellent-40/</loc>
+        <loc>http://localhost:8080/en/blog/eleventy-excellent-40/</loc>
         <lastmod>2025-01-11T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
@@ -177,7 +177,7 @@
       
 
       <url>
-        <loc>http://localhost:8080/blog/app-di-emergenza-per-la-croce-rossa-il-nostro-primo-grande-progetto/</loc>
+        <loc>http://localhost:8080/it/blog/app-di-emergenza-per-la-croce-rossa-il-nostro-primo-grande-progetto/</loc>
         <lastmod>2025-02-01T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
@@ -190,7 +190,7 @@
       
 
       <url>
-        <loc>http://localhost:8080/blog/come-contribuire-a-codicesolidale-anche-se-non-sei-uno-sviluppatore/</loc>
+        <loc>http://localhost:8080/it/blog/come-contribuire-a-codicesolidale-anche-se-non-sei-uno-sviluppatore/</loc>
         <lastmod>2025-03-15T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
@@ -203,7 +203,7 @@
       
 
       <url>
-        <loc>http://localhost:8080/blog/codicesolidale-2025-i-numeri-di-un-anno-straordinario/</loc>
+        <loc>http://localhost:8080/it/blog/codicesolidale-2025-i-numeri-di-un-anno-straordinario/</loc>
         <lastmod>2025-06-01T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
@@ -217,7 +217,7 @@
 
       <url>
         <loc>http://localhost:8080/tags/case-study/</loc>
-        <lastmod>2026-11-11T19:02:30.420Z</lastmod>
+        <lastmod>2026-11-15T08:30:21.247Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -230,7 +230,7 @@
 
       <url>
         <loc>http://localhost:8080/tags/</loc>
-        <lastmod>2026-11-11T19:02:30.420Z</lastmod>
+        <lastmod>2026-11-15T08:30:21.247Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -289,7 +289,7 @@
 
       <url>
         <loc>http://localhost:8080/en/about/</loc>
-        <lastmod>2026-11-11T19:02:30.421Z</lastmod>
+        <lastmod>2026-11-15T08:30:21.249Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -302,7 +302,7 @@
 
       <url>
         <loc>http://localhost:8080/en/accessibility/</loc>
-        <lastmod>2026-11-11T19:02:30.421Z</lastmod>
+        <lastmod>2026-11-15T08:30:21.249Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -315,7 +315,7 @@
 
       <url>
         <loc>http://localhost:8080/en/blog/</loc>
-        <lastmod>2026-11-11T19:02:30.421Z</lastmod>
+        <lastmod>2026-11-15T08:30:21.249Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -328,7 +328,7 @@
 
       <url>
         <loc>http://localhost:8080/en/built-with/</loc>
-        <lastmod>2026-11-11T19:02:30.421Z</lastmod>
+        <lastmod>2026-11-15T08:30:21.249Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -341,7 +341,7 @@
 
       <url>
         <loc>http://localhost:8080/en/</loc>
-        <lastmod>2026-11-11T19:02:30.421Z</lastmod>
+        <lastmod>2026-11-15T08:30:21.249Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -354,7 +354,7 @@
 
       <url>
         <loc>http://localhost:8080/en/join/</loc>
-        <lastmod>2026-11-11T19:02:30.421Z</lastmod>
+        <lastmod>2026-11-15T08:30:21.249Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -367,7 +367,7 @@
 
       <url>
         <loc>http://localhost:8080/en/legal/</loc>
-        <lastmod>2026-11-11T19:02:30.421Z</lastmod>
+        <lastmod>2026-11-15T08:30:21.249Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -380,7 +380,7 @@
 
       <url>
         <loc>http://localhost:8080/en/privacy/</loc>
-        <lastmod>2026-11-11T19:02:30.421Z</lastmod>
+        <lastmod>2026-11-15T08:30:21.249Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -393,7 +393,7 @@
 
       <url>
         <loc>http://localhost:8080/en/projects/</loc>
-        <lastmod>2026-11-11T19:02:30.421Z</lastmod>
+        <lastmod>2026-11-15T08:30:21.249Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -406,7 +406,7 @@
 
       <url>
         <loc>http://localhost:8080/get-started/</loc>
-        <lastmod>2026-11-11T19:02:30.421Z</lastmod>
+        <lastmod>2026-11-15T08:30:21.249Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -419,7 +419,7 @@
 
       <url>
         <loc>http://localhost:8080/it/accessibilita/</loc>
-        <lastmod>2026-11-11T19:02:30.421Z</lastmod>
+        <lastmod>2026-11-15T08:30:21.249Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -432,7 +432,7 @@
 
       <url>
         <loc>http://localhost:8080/it/blog/</loc>
-        <lastmod>2026-11-11T19:02:30.421Z</lastmod>
+        <lastmod>2026-11-15T08:30:21.249Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -445,7 +445,7 @@
 
       <url>
         <loc>http://localhost:8080/it/chi-siamo/</loc>
-        <lastmod>2026-11-11T19:02:30.422Z</lastmod>
+        <lastmod>2026-11-15T08:30:21.249Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -458,7 +458,7 @@
 
       <url>
         <loc>http://localhost:8080/it/</loc>
-        <lastmod>2026-11-11T19:02:30.422Z</lastmod>
+        <lastmod>2026-11-15T08:30:21.249Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -471,7 +471,7 @@
 
       <url>
         <loc>http://localhost:8080/it/note-legali/</loc>
-        <lastmod>2026-11-11T19:02:30.422Z</lastmod>
+        <lastmod>2026-11-15T08:30:21.249Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -484,7 +484,7 @@
 
       <url>
         <loc>http://localhost:8080/it/privacy/</loc>
-        <lastmod>2026-11-11T19:02:30.422Z</lastmod>
+        <lastmod>2026-11-15T08:30:21.249Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -497,7 +497,7 @@
 
       <url>
         <loc>http://localhost:8080/it/progetti/</loc>
-        <lastmod>2026-11-11T19:02:30.422Z</lastmod>
+        <lastmod>2026-11-15T08:30:21.249Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -510,7 +510,7 @@
 
       <url>
         <loc>http://localhost:8080/it/realizzato-con/</loc>
-        <lastmod>2026-11-11T19:02:30.422Z</lastmod>
+        <lastmod>2026-11-15T08:30:21.249Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
@@ -523,7 +523,7 @@
 
       <url>
         <loc>http://localhost:8080/it/unisciti/</loc>
-        <lastmod>2026-11-11T19:02:30.422Z</lastmod>
+        <lastmod>2026-11-15T08:30:21.249Z</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     
