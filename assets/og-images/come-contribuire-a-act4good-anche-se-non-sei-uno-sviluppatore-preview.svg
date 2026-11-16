@@ -27,7 +27,7 @@
     fill="#161616"
     letter-spacing="-1"
   >
-    <tspan x="160" y="90">
+    <tspan x="160" y="130">
       15 / 03 / 2025
     </tspan>
   </text>
@@ -42,13 +42,11 @@
     letter-spacing="-3"
   >
     
-      <tspan x="160" y="190"> Come contribuire a </tspan>
+      <tspan x="160" y="230"> Come contribuire a </tspan>
     
-      <tspan x="160" y="275"> CodiceSolidale anche </tspan>
+      <tspan x="160" y="315"> Act4good anche se non </tspan>
     
-      <tspan x="160" y="360"> se non sei uno </tspan>
-    
-      <tspan x="160" y="445"> sviluppatore </tspan>
+      <tspan x="160" y="400"> sei uno sviluppatore </tspan>
     
   </text>
 
