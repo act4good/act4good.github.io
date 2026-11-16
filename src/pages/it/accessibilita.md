@@ -23,7 +23,7 @@ Per i test automatici di accessibilità utilizziamo [pa11y-ci](https://github.co
 
 Accogliamo con piacere commenti e suggerimenti sull'accessibilità di questo sito. Se incontri una barriera di accessibilità, faccelo sapere:
 
-- **GitHub Issues**: [Segnala un problema di accessibilità](https://github.com/codicesolidale)
+- **GitHub Issues**: [Segnala un problema di accessibilità](https://github.com/act4good)
 - **Email**: {{ personal.email }}
 
 **Tempi di risposta**: ci impegniamo a rispondere entro una settimana.

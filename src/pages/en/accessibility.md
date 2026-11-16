@@ -23,7 +23,7 @@ This website aims to be conformant with [WCAG 2.1 Level AA.](https://www.w3.org/
 
 We very much welcome your feedback and suggestions on the accessibility of this website. Please let us know if you encounter any accessibility barriers:
 
-- **GitHub Issues**: [Report accessibility issues](https://github.com/codicesolidale)
+- **GitHub Issues**: [Report accessibility issues](https://github.com/act4good)
 - **Email**: {{ personal.email }}
 
 **Response Time**: we aim to respond to feedback within one week.

@@ -1,5 +1,5 @@
 ---
-title: 'Come contribuire a CodiceSolidale anche se non sei uno sviluppatore'
+title: 'Come contribuire a Act4good anche se non sei uno sviluppatore'
 description: 'Molti pensano che per contribuire a un progetto tech bisogna saper programmare. Non è vero. Ecco 5 modi concreti per partecipare con qualsiasi background.'
 date: 2025-03-15
 tags:
@@ -8,7 +8,7 @@ tags:
   - contribuire
 ---
 
-Ogni volta che presentiamo CodiceSolidale a eventi o nelle università, riceviamo la stessa domanda: *"È interessante, ma io non so programmare — posso essere utile lo stesso?"*
+Ogni volta che presentiamo Act4good a eventi o nelle università, riceviamo la stessa domanda: *"È interessante, ma io non so programmare — posso essere utile lo stesso?"*
 
 La risposta è sempre sì. E non lo diciamo per gentilezza.
 
@@ -61,7 +61,7 @@ Le organizzazioni no profit con cui lavoriamo hanno bisogno di visibilità. E an
 - Gestire i nostri profili social (LinkedIn, Instagram, Mastodon)
 - Scrivere articoli per il blog — come questo
 - Contattare giornalisti e media
-- Presentare CodiceSolidale nelle università, nelle aziende, agli eventi
+- Presentare Act4good nelle università, nelle aziende, agli eventi
 
 ### 5. Fundraising e Partnership
 
@@ -75,8 +75,8 @@ Senza risorse non si va lontano. Chi ha esperienza nel terzo settore, nelle vend
 
 Non esiste un percorso obbligatorio. Ma se vuoi iniziare subito:
 
-1. **Scrivici** a [info@codicesolidale.org](mailto:info@codicesolidale.org) presentandoti e dicendo cosa sai fare
-2. **Guarda i progetti aperti** su [GitHub](https://github.com/codicesolidale) — molte issue non richiedono codice
+1. **Scrivici** a [act4good.org@gmail.com](mailto:act4good.org@gmail.com) presentandoti e dicendo cosa sai fare
+2. **Guarda i progetti aperti** su [GitHub](https://github.com/act4good) — molte issue non richiedono codice
 3. **Partecipa al prossimo meeting mensile** — aperto a tutti, annunciato sui nostri canali
 
 La porta è aperta. Ti aspettiamo.

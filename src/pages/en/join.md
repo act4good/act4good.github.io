@@ -1,12 +1,12 @@
 ---
-title: Join CodiceSolidale
-description: 'Discover how to contribute to CodiceSolidale: software development, communications, financial support or sharing ideas. Anyone can make a difference.'
+title: Join Act4good
+description: 'Discover how to contribute to Act4good: software development, communications, financial support or sharing ideas. Anyone can make a difference.'
 layout: page
 ---
 
 ## How You Can Contribute
 
-There is no single way to contribute. CodiceSolidale is an open community and every type of participation has value. Here are some concrete ways to start:
+There is no single way to contribute. Act4good is an open community and every type of participation has value. Here are some concrete ways to start:
 
 ---
 
@@ -20,7 +20,7 @@ Are you a developer, devops engineer, tester or do you have technical skills? Yo
 - **DevOps**: CI/CD, Docker, cloud deployment, security
 - **Testing**: unit tests, integration testing, automated accessibility
 
-**How to start**: Explore our repositories on [GitHub](https://github.com/codicesolidale), look for issues labeled `good first issue` and submit a pull request. Mentors will help you through the process.
+**How to start**: Explore our repositories on [GitHub](https://github.com/act4good), look for issues labeled `good first issue` and submit a pull request. Mentors will help you through the process.
 
 ---
 
@@ -32,13 +32,13 @@ Good design is essential for software used by real people. We're looking for:
 - **UI designers** to create clear, accessible and beautiful interfaces
 - **Graphic designers** for communication materials, presentations and social media
 
-**How to start**: Look at open projects, contact us on [GitHub](https://github.com/codicesolidale) or write to [info@codicesolidale.org](mailto:info@codicesolidale.org) to introduce yourself.
+**How to start**: Look at open projects, contact us on [GitHub](https://github.com/act4good) or write to [act4good.org@gmail.com](mailto:act4good.org@gmail.com) to introduce yourself.
 
 ---
 
 ### 📣 Communications and Social Media
 
-Help us raise awareness of CodiceSolidale and the organizations we work with.
+Help us raise awareness of Act4good and the organizations we work with.
 
 - Create and manage content for social media (LinkedIn, Instagram, Mastodon)
 - Write articles and impact stories for the blog
@@ -46,7 +46,7 @@ Help us raise awareness of CodiceSolidale and the organizations we work with.
 - Organize events, meetups and presentations at universities and companies
 - Contact journalists and media to cover our projects
 
-**How to start**: Write to us at [info@codicesolidale.org](mailto:info@codicesolidale.org) and tell us how you'd like to contribute.
+**How to start**: Write to us at [act4good.org@gmail.com](mailto:act4good.org@gmail.com) and tell us how you'd like to contribute.
 
 ---
 
@@ -63,7 +63,7 @@ Do you have an idea for a project? Do you know a nonprofit that needs technologi
 
 ### 💰 Financial Support
 
-CodiceSolidale is a non-profit association. Operational costs (servers, tools, events) are covered by donations from those who believe in this project.
+Act4good is a non-profit association. Operational costs (servers, tools, events) are covered by donations from those who believe in this project.
 
 **You can contribute financially:**
 
@@ -71,13 +71,13 @@ CodiceSolidale is a non-profit association. Operational costs (servers, tools, e
 - **Recurring donation** (monthly or annual)
 - **Corporate partnership**: your company can sponsor a specific project
 
-For information on donation methods or partnerships, write to [info@codicesolidale.org](mailto:info@codicesolidale.org).
+For information on donation methods or partnerships, write to [act4good.org@gmail.com](mailto:act4good.org@gmail.com).
 
 ---
 
 ## How to Get Started
 
-1. **Explore projects** on [GitHub](https://github.com/codicesolidale) or on the [Projects](/en/projects/) page
+1. **Explore projects** on [GitHub](https://github.com/act4good) or on the [Projects](/en/projects/) page
 2. **Join the community**: write to us to enter the communication channels (Slack/Matrix)
 3. **Attend a meeting** — every month we organize an open online meeting for everyone
 4. **Choose your contribution** — no need to wait, you can start right away
@@ -100,4 +100,4 @@ Yes! Open an issue on GitHub describing the idea or organization that needs help
 
 ---
 
-📧 **Have more questions?** Write to us at [info@codicesolidale.org](mailto:info@codicesolidale.org)
+📧 **Have more questions?** Write to us at [act4good.org@gmail.com](mailto:act4good.org@gmail.com)

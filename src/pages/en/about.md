@@ -1,12 +1,12 @@
 ---
 title: About us
-description: 'CodiceSolidale is a community of developers, designers and volunteers building technology in service of nonprofit organizations and vulnerable communities.'
+description: 'Act4good is a community of developers, designers and volunteers building technology in service of nonprofit organizations and vulnerable communities.'
 layout: page
 ---
 
 ## Our Mission
 
-CodiceSolidale is a non-profit association that connects **developers, designers, makers, communicators and technology enthusiasts** with nonprofit organizations that need digital tools.
+Act4good is a non-profit association that connects **developers, designers, makers, communicators and technology enthusiasts** with nonprofit organizations that need digital tools.
 
 Our goal is to break down the technological barriers that prevent third-sector organizations from realizing their full potential. We do this by building open source software together — free, sustainable and community-owned.
 
@@ -45,11 +45,11 @@ Our community is built on respectful communication, constructive feedback and mu
 
 ## Our History
 
-CodiceSolidale was founded in 2022 by a group of developers in Milan who, during the pandemic, experienced firsthand how the lack of adequate digital tools slowed down humanitarian organizations' work.
+Act4good was founded in 2022 by a group of developers in Milan who, during the pandemic, experienced firsthand how the lack of adequate digital tools slowed down humanitarian organizations' work.
 
 The first project was a simple coordination app for a local soup kitchen. Within months, the community grew organically: more developers joined, then designers, communicators, and eventually nonprofit organizations began proposing their own needs.
 
-Today CodiceSolidale has completed over 45 projects across 18 countries, with an active community of over 250 volunteers.
+Today Act4good has completed over 45 projects across 18 countries, with an active community of over 250 volunteers.
 
 ---
 
@@ -69,9 +69,9 @@ Every significant decision is discussed publicly on GitHub or in our community c
 
 Have an idea? Want to propose a project? Just want to learn more?
 
-📧 Write to us at [info@codicesolidale.org](mailto:info@codicesolidale.org)
+📧 Write to us at [act4good.org@gmail.com](mailto:act4good.org@gmail.com)
 
-🐙 Explore our repositories on [GitHub](https://github.com/codicesolidale)
+🐙 Explore our repositories on [GitHub](https://github.com/act4good)
 
 👥 [Join the community →](/en/join/)
 

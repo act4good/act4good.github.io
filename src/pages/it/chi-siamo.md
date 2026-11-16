@@ -1,12 +1,12 @@
 ---
 title: Chi siamo
-description: 'CodiceSolidale è una comunità di sviluppatori, designer e volontari che costruisce tecnologia a servizio delle organizzazioni no profit e delle comunità vulnerabili.'
+description: 'Act4good è una comunità di sviluppatori, designer e volontari che costruisce tecnologia a servizio delle organizzazioni no profit e delle comunità vulnerabili.'
 layout: page
 ---
 
 ## La nostra missione
 
-CodiceSolidale è un'associazione di promozione sociale (APS) che mette in connessione **sviluppatori, designer, maker, comunicatori e appassionati di tecnologia** con le organizzazioni no profit che hanno bisogno di strumenti digitali.
+Act4good è un'associazione di promozione sociale (APS) che mette in connessione **sviluppatori, designer, maker, comunicatori e appassionati di tecnologia** con le organizzazioni no profit che hanno bisogno di strumenti digitali.
 
 Il nostro obiettivo è abbattere le barriere tecnologiche che impediscono alle organizzazioni del terzo settore di realizzare il loro potenziale. Lo facciamo costruendo insieme software open source, gratuito e sostenibile.
 
@@ -45,11 +45,11 @@ La nostra community si basa su comunicazione rispettosa, feedback costruttivo e 
 
 ## La storia
 
-CodiceSolidale nasce nel 2022 dall'iniziativa di un gruppo di sviluppatori milanesi che, durante la pandemia, avevano vissuto in prima persona quanto la mancanza di strumenti digitali adeguati rallentasse il lavoro delle organizzazioni umanitarie.
+Act4good nasce nel 2022 dall'iniziativa di un gruppo di sviluppatori milanesi che, durante la pandemia, avevano vissuto in prima persona quanto la mancanza di strumenti digitali adeguati rallentasse il lavoro delle organizzazioni umanitarie.
 
 Il primo progetto fu una semplice app di coordinamento per una mensa sociale. In pochi mesi, la community crebbe organicamente: altri sviluppatori si unirono, poi designer, comunicatori, e infine anche le organizzazioni no profit iniziarono a proporre i loro bisogni.
 
-Oggi CodiceSolidale ha completato oltre 45 progetti in 18 paesi, con una community attiva di oltre 250 volontari.
+Oggi Act4good ha completato oltre 45 progetti in 18 paesi, con una community attiva di oltre 250 volontari.
 
 ---
 
@@ -69,8 +69,8 @@ Ogni decisione rilevante viene discussa pubblicamente su GitHub o nei nostri can
 
 Hai un'idea? Vuoi proporre un progetto? Vuoi semplicemente saperne di più?
 
-📧 Scrivici a [info@codicesolidale.org](mailto:info@codicesolidale.org)
+📧 Scrivici a [act4good.org@gmail.com](mailto:act4good.org@gmail.com)
 
-🐙 Esplora i nostri repository su [GitHub](https://github.com/codicesolidale)
+🐙 Esplora i nostri repository su [GitHub](https://github.com/act4good)
 
 👥 [Unisciti alla community →](/it/unisciti/)

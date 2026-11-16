@@ -59,6 +59,6 @@ Martina ci ha scritto dopo sei mesi: *"Non so come avremmo gestito l'alluvione d
 
 ---
 
-Il codice è open source: [github.com/codicesolidale/emergency-app](https://github.com/codicesolidale)
+Il codice è open source: [github.com/act4good/emergency-app](https://github.com/act4good)
 
 Vuoi costruire qualcosa di simile per la tua organizzazione? [Scrivici →](/it/unisciti/)
